@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+//         console.log(this)
+//         const originalSetTimeOut = window.setTimeout
+
+// let ids = []
+
+// console.log(originalSetTimeOut)
+// window.mysetTimeOut = (fn,interval)=>
+// {
+//   let id  =  originalSetTimeOut(fn,interval)
+// //   console.log(fn,id)
+//     ids.push(id);
+//     return id;
+// } 
+
+// function clearAllSetTimeout()
+// {
+//     while(ids.length!=0)
+//     {
+//         clearTimeout(ids.pop())
+//     }
+// }
+// ids.push(setTimeout(()=>{console.log("hello 1")},1000)) 
+// console.log(ids)
+// ids.push(setTimeout(()=>{console.log("hello 2")},2000) )
+// console.log(ids)
+// setTimeout(()=>{console.log("hello 3")},3000 )
+// ids.push(tempid)
+// console.log(tempid) 
+// clearAllSetTimeout()
+// setTimeout(()=>{console.log("hello 4")},4000) 
+// console.log(ids)
+
+
+// let a=15;
+// for (let i = 0; i < a; i++) {
+//    console.log(  i.toString().padStart(2,0));
+// }
+const calc = {
+  total : 0,
+  add(a)
+  {
+     this.total=this.total+a;
+    return this;
+  },
+  multiply(m)
+  {
+     this.total=this.total*m;
+    return this;
+  },
+  subtract(s)
+  {
+     this.total=this.total-s;
+    return this;
+  },
+  
+}
+
+let res  = calc.multiply(23).add(10).subtract(4).add(65)
+// let res  = calc.add(10)
+;
+console.log(res.total)
+    </script>
+</body>
+</html>

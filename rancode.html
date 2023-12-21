@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function getRndInteger(min, max) {
+ 
+ var a = Math.floor(Math.random() * (max - min + 1) ) + min;
+ 
+   let rancode ='#'+ a.toString(16);
+   return rancode;
+ 
+ }
+ var a = getRndInteger(150,582)
+ console.log(a)
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+ </head>
+ <body>
+  <script>
+   function executeWithConcurrencyLimit(tasks, concurrencyLimit) {
+    const results = [];
+    let index = 0;
+
+    function executeNext() {
+     if (index < tasks.length) {
+      const task = tasks[index++];
+      return task().then((result) => {
+       results.push(result);
+      });
+     }
+     return Promise.resolve();
+    }
+    re;
+
+    const concurrencyPromises = Array.from(
+     { length: concurrencyLimit },
+     executeNext,
+    );
+    return Promise.all(concurrencyPromises).then(() => results);
+   }
+
+   const tasks = [
+    () => fetch('https://jsonplaceholder.typicode.com/posts'),
+    () => fetch('https://jsonplaceholder.typicode.com/users'),
+    () => fetch('https://jsonplaceholder.typicode.com/albums'),
+    // Add more tasks here
+   ];
+   const concurrencyLimit = 2;
+
+   executeWithConcurrencyLimit(tasks, concurrencyLimit)
+    .then((results) => {
+     console.log('Results:', results);
+    })
+    .catch((error) => {
+     console.error('Error:', error);
+    });
+  </script>
+ </body>
+</html>

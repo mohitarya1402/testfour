@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+ </head>
+ <body>
+  <script>
+   const counter = () => {
+    debugger;
+    let count = 0;
+    return () => {
+     count++;
+     return count++;
+    };
+   };
+   const increment = counter();
+   console.log('first time ', increment);
+   //    console.log('count value ', count);
+   const result1 = increment();
+   const result2 = increment();
+   const result3 = increment();
+
+   console.log(result1);
+   console.log(result2);
+   console.log(result3);
+  </script>
+ </body>
+</html>

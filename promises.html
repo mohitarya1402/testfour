@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+ </head>
+ <body>
+  <h1>Promises 1</h1>
+  <script>
+   function global(url, key) {
+    return fetch(url)
+     .then((res) => {
+      if (!res.ok) {
+       throw new console.error('some error occurred');
+      }
+      return res.json();
+     })
+     .then((data) => {
+      for (let r of data) {
+       console.log(r.name);
+      }
+     })
+     .catch((er) => console.log(er));
+   }
+   let result = global('https://jsonplaceholder.typicode.com/users/', 1);
+   console.log(result);
+  </script>
+ </body>
+</html>
+l

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log("ddd")
+        function unionOfArray(ar,br)
+    {
+        // debugger 
+        let myMap = new Map();
+        let a =0 ,b=0;
+        console.log(ar)
+        console.log(br)
+        console.log("ar length ", ar.lenght)
+            console.log("ar length ", br.lenght)
+        // while(a<ar.length&&b<2)
+        {
+         
+            console.log("a " ,a)
+            console.log("b " ,a)
+                if(ar[a]==br[b]&&!(myMap.has(ar[a])))
+                {
+                    myMap.set(ar[a]);
+                    a++;
+                    b++;
+                }
+                if(a<ar.lenght)
+                {
+                    console.log("inside ar")
+                    myMap.set(ar[a])
+                    a++;
+                }
+               else if(b<br.lenght)
+                {
+                    console.log("inside br")
+
+                    myMap.set(br[b])
+                    b++
+                }
+        }
+        console.log(myMap)
+    }
+    let ar = new Array(1, 2, 3,3, 4, 5);
+    const br = [1,2,2,3,3]
+    console.log(ar)
+    console.log("length array ",ar.length)
+    console.log(Array.isArray(ar))
+    console.log(typeof br)
+    unionOfArray(ar,br)
+    console.log("ds")
+    </script>
+</body>
+</html>

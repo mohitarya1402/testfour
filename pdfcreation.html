@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <!-- Include jsPDF from CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+  <!-- Include jsPDF from CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+ </head>
+ <body>
+  <script>
+   // Create a new jsPDF instance
+   var doc = new jsPDF();
+
+   // Add content to the PDF
+   doc.text('Hello, this is a PDF document!', 10, 10);
+
+   // Save the PDF
+   doc.save('sample.pdf');
+   var doc = new jsPDF();
+
+   // Add a table to the PDF
+   doc.autoTable({
+    head: [['Name', 'Email']],
+    body: [
+     ['John Doe', 'john@example.com'],
+     ['Jane Doe', 'jane@example.com'],
+    ],
+   });
+
+   // Save the PDF
+   doc.save('data.pdf');
+  </script>
+ </body>
+</html>

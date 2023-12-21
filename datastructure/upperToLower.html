@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function upperToLower(s)
+{
+    debugger
+    let ar='';
+  for(let i=0;i<s.length;i++)
+  {
+    if('A'<=s[i]&&s[i]<='Z'||s[i]==''||s[i])
+    {
+    //   s[i] = 'a';
+    // console.log("hellooo",String.fromCharCode(s[i].charCodeAt(0)+32))
+        ar = ar+String.fromCharCode(s[i].charCodeAt(0)+32);
+    }   
+  }
+  console.log(ar)
+}
+let s = "A man, a plan, a canal: Panama";
+upperToLower(s)
+    </script>
+</body>
+</html>

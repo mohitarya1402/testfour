@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+ </head>
+ <body>
+  <script>
+   function roundToDecimal(number, decimalPlaces) {
+    debugger;
+    var multiplier = Math.pow(10, decimalPlaces);
+    let mult = multiplier;
+    let pro = number * mult;
+    let cal = Math.round(pro);
+    let res = cal / mult;
+    return res;
+   }
+
+   var number1 = 4.57;
+   var number2 = 4.53;
+
+   var roundedNumber1 = roundToDecimal(number1, 1); // Round up
+   var roundedNumber2 = roundToDecimal(number2, 1); // Round down
+
+   console.log(roundedNumber1); // Output: 4.6
+   console.log(roundedNumber2); // Output: 4.5
+  </script>
+ </body>
+</html>

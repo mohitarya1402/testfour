@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+  width:200px;
+  height:200px;
+  border:2px solid;
+  margin:5px;
+}
+#h1{
+  background:red;
+}
+#h2{
+  background:blue;
+}
+#h3{
+  background:pink;
+}
+#h4{
+  background:green;
+}
+
+    </style>
+</head>
+<body>
+    <a href="#h1">hello 1</a>
+    <a href="#h2">hello 2</a>
+    <a href="#h3">hello 3</a>
+    <a href="#h4">hello 4</a>
+  
+  <div id="h1"> hello 1</div>
+    <div id="h2"> hello 2</div>
+    <div id="h3"> hello 3</div>
+    <div id="h4"> hello 4</div>
+    <script>
+       
+        document.querySelectorAll('a[href^="#"]').forEach(a => {
+            console.log(this)
+a.addEventListener('click',function(e){
+    e.preventDefault()
+    // console.log(a)
+    // console.log(this)
+  document.querySelector(a.getAttribute('href')).scrollIntoView({
+    behavior:"smooth",
+    
+  });
+});
+});
+    </script>
+</body>
+</html>

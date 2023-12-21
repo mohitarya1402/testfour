@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- <link rel="stylesheet" href="styles.css" />
+  <script src="script.js"></script> -->
+  <title>Scroll Banner and Page</title>
+  <style>
+   body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+   }
+
+   #scroll-banner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    z-index: 1; /* Ensures the banner is above the page content */
+   }
+
+   #page-content {
+    width: 250px;
+    height: 250px;
+    border: 1px solid red;
+    overflow: auto;
+    margin-top: 100px; /* Adjust this value to match the banner's height */
+   }
+  </style>
+ </head>
+ <body>
+  <div id="scroll-banner">
+   <!-- Your scroll banner content goes here -->
+   <h1>Scroll Banner</h1>
+  </div>
+  <div id="page-content">
+   <!-- Your page content goes here -->
+   <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit... Lorem ipsum dolor
+    sit amet consectetur adipisicing elit. Fuga aut vel voluptatum pariatur
+    ducimus similique, voluptatibus repudiandae alias obcaecati repellendus
+    fugit excepturi magni velit non cupiditate nemo illo! Exercitationem,
+    officiis. Lorem ipsum dolor sit amet, consectetur adipiscing elit... Lorem
+    ipsum dolor sit amet consectetur adipisicing elit. Fuga aut vel voluptatum
+    pariatur ducimus similique, voluptatibus repudiandae alias obcaecati
+    repellendus fugit excepturi magni velit non cupiditate nemo illo!
+    Exercitationem, officiis. Lorem ipsum dolor sit amet, consectetur adipiscing
+    elit... Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aut
+    vel voluptatum pariatur ducimus similique, voluptatibus repudiandae alias
+    obcaecati repellendus fugit excepturi magni velit non cupiditate nemo illo!
+    Exercitationem, officiis. Lorem ipsum dolor sit amet, consectetur adipiscing
+    elit... Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aut
+    vel voluptatum pariatur ducimus similique, voluptatibus repudiandae alias
+    obcaecati repellendus fugit excepturi magni velit non cupiditate nemo illo!
+    Exercitationem, officiis.
+   </p>
+  </div>
+  <script>
+   // Listen for the scroll event
+   window.addEventListener('scroll', function () {
+    // Get the scroll position
+    debugger;
+    var scrollPosition = window.scrollY;
+
+    // Update the scroll banner and page content position
+    var scrollBanner = document.getElementById('scroll-banner');
+    var pageContent = document.getElementById('page-content');
+
+    // You can adjust the speed of scrolling by changing the multiplier (e.g., 0.5)
+    scrollBanner.style.transform =
+     'translateY(' + -scrollPosition * 0.5 + 'px)';
+    pageContent.style.transform = 'translateY(' + -scrollPosition * 0.5 + 'px)';
+   });
+  </script>
+ </body>
+</html>

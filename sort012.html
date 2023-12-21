@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //     function sortColors(ar)
+    //     {
+    //         let tempAr= []
+    //         let j=0;
+    //         for(let i=0;i<ar.length;i++)
+    //         {
+    //             if(ar[i]>0)
+    //             {
+    //                 tempAr[j] = ar[i];
+    //                 j++
+    //             }
+    //         }
+    //         for(let i=0;i<ar.length;i++)
+    //         {
+    //             if(ar[i]<0)
+    //             {
+    //                 tempAr[j] = ar[i];
+    //                 j++;
+    //             }
+    //         }
+    //         for(let i=0;i<ar.length;i++)
+    //         {
+    //             ar[i]=tempAr[i];
+    //         }
+    //         console.log(ar)
+    //     }
+    // let nums = [1, -1, 3, 2, -7, -5, 11, 6 ]
+    //    console.log(sortColors(nums))
+
+    function unionOfArray(ar,br)
+    {
+        // debugger 
+        let myMap = new Map();
+        let a =0 ,b=0;
+        while(a<ar.length||b<br.lenght)
+        {
+            console.log("a")
+                if(ar[a]==br[b]&&!(myMap.has(ar[a])))
+                {
+                    myMap.set(ar[a]);
+                    a++;
+                    b++;
+                }
+                if(ar[a]<ar.lenght)
+                {
+                    myMap.set(ar[a])
+                    a++;
+                }
+                if(br[b]<br.lenght)
+                {
+                    myMap.set(br[b])
+                    b++
+                }
+        }
+        console.log(myMap)
+    }
+    let ar = [1, 2, 3,3, 4, 5],br = [1,2,2,3,3]
+    unionOfArray(ar,br)
+    console.log("ds")
+    </script>
+</body>
+</html>

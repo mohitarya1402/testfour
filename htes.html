@@ -1,0 +1,304 @@
+
+<script type="text/javascript">
+   var isMazdaLandingPages = true;
+   var mazdaModel = "cx90Phev";               
+</script>
+<link href="/css/components/Custompage/mazdapages/MazdaLanding.min.css?v=895877812" rel="stylesheet" />
+<div id="mazdamodellanding"> 
+<section class="mazda-cx90-phev" v-if="mazdaDetails">
+      <section class="hero-banner-section">
+         <div class="hero-banner-section-img-wrapper text-center" v-bind:class="mazdaDetails.className">
+            <div class="hero-banner-section-top  px-lg-0 px-lg-5 pt-3  px-3 position-relative">
+               <p class="font-weight-bold" style="letter-spacing:2.8px;font-size:0.813rem;color:#fff;">{{mazdaDetails.banner.heading1}}</p>
+               <h2 class="mt-lg-0 mt-3 font-weight-bold" style="color:#fff;letter-spacing:7.54px;font-size:2.188rem;line-height:1;">{{mazdaDetails.banner.heading2}}</h2>
+            </div>
+            <div class="hero-banner-section-bottom" style="z-index: 1;">
+               <div class="hero-banner-section-bottom-buttons d-lg-inline-block d-block p-lg-0 p-3">
+                  <div class="d-lg-flex align-items-center"><span class="d-lg-inline-block d-block mr-lg-3"><a class="d-flex align-items-center justify-content-center no-hover secondary-btn mr-lg--2 " v-bind:href="mazdaDetails.banner.button1url"> {{mazdaDetails.banner.button1text}} </a> </span> <span class="d-lg-inline-block d-block mt-lg-0 mt-3"> <a class="secondary-btn secondary-btn-with-border justify-content-center no-hover text-center text-uppercase d-flex align-items-center" v-bind:href="mazdaDetails.banner.button2url"> {{mazdaDetails.banner.button2text}} </a> </span></div>
+               </div>
+               <p class="mt-2 px-lg-0 mb-1 px-2">{{mazdaDetails.banner.bottomText}}</p>
+            </div>
+         </div>
+      </section>
+      <section class="backgroudVideo-section" v-if="!mazdaDetails.hidebackgroudVideo">
+         <div class="container-fluid p-0">
+            <div class="row no-gutters">
+               <div class="col-lg-6 col-12 m-0 p-0 backgroudVideo-section-video">
+                  <video-tag v-bind:coverurl="'../../../images/mazdacx-5/Video_CoverPhoto_Mazda-CX-5.jpg'" v-bind:customcontrols="'controls'" v-bind:customplayicon="'primaryicon-play-filled'" v-bind:source="mazdaDetails.banner.video"> </video-tag>
+               </div>
+               <div class="col-lg-6 col-12 backgroudVideo-section-text">
+                  <div class="row justify-content-center h-100 align-items-center">
+                     <div class="col-xxl-8 col-xl-9 col-12 px-lg-0 px-4">
+                        <div class="mb-3 text-left mt-lg-0 mt-5 pt-3 pt-lg-0">The 2022 Mazda CX-5 is the only vehicle to achieve the highest rating in the new IIHS side impact crash test &mdash; proof our engineering provides peace of mind.</div>
+                        <p class="mb-4 text-left">The 2021 Mazda CX-5 was the only vehicle among 20 participating small SUVs to earn a &ldquo;Good&rdquo; rating in the new, tougher side impact test performed by the IIHS (October 2021).</p>
+                        <div class="backgroudVideo-section-text-cta d-flex"><a class="d-flex align-items-center justify-content-center no-hover secondary-btn mr-lg-2 bg-white col-auto" v-bind:href="mazdaDetails.banner.button1url"> {{mazdaDetails.banner.button1text}} </a></div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <section class="text-white py-5 " style="background-color: black;">
+         <div class="row design-section mt-5">
+            <div class="col-md-7  m-auto text-center">
+               <p class="all-electric text-center line-height-1 m-auto pb-4 w-75" style="color:#fff;letter-spacing: 3.08px;font-size:1.25rem;font-family:'MazdaType-Bold';">ALL ELECTRIC FOR SHORT TRIPS. COMBUSTION AND ELECTRIC FOR LONGER JOURNEYS.</p>
+               <p class="mb-2 text-center px-3 px-lg-0" style="opacity: 0.9; font-size:0.875rem;line-height:1.71;color:#fff;">The first-ever Mazda CX-90 Plug-in Hybrid Electric Vehicle (PHEV) was designed as the ultimate expression of everything Mazda stands for. Our 3-row SUV has been crafted to exhilarate through electrification, design, technology and performance.</p>
+               <p class="text-center" style="font-size:0.625rem;color:#6c6c6c">2024 Mazda CX-90 PHEV Premium Plus with options shown.</p>
+               <div class="row">
+                  <div class="col-md-10 m-auto row">
+                     <div class="col-md-4 pt-4">
+                        <p class="line-height-1 m-0 text-center" style="font-size:0.625rem;
+                           color: #fff;letter-spacing:0.5px;
+                           ">Electric Only Range</p>
+                        <h4 class="line-height-1 my-1 text-lowercase text-center position-relative font-weight-bold" style="font-size:1.5rem;letter-spacing:1.2px;">26 mi<sup class="disclosure-text ft-16 feature-desclaimers position-absolute" style="top:4px;font-size: 0.5rem;letter-spacing: 0.4px;" des="c1,1" v-on:click.prevent="onDisclaimerClick(mazdaDetails.allElectric.desclaimer1)">1</sup></h4>
+                        <p class="line-height-1 text-white-50" style="font-size:0.625rem;color:#6c6c6c;">EPA-Estimated</p>
+                     </div>
+                     <div class="col-md-4 pt-4">
+                        <p class="line-height-1 m-0 text-center" style="font-size:0.625rem;
+                           color: #fff;letter-spacing:0.5px;
+                           ">Total Range</p>
+                        <h4 class="line-height-1 text-lowercase my-1 text-center position-relative font-weight-bold" style="font-size:1.5rem;letter-spacing:1.2px;">490 mi<sup class="disclosure-text ft-16 feature-desclaimers position-absolute" style="top:4px;font-size: 0.5rem;letter-spacing: 0.4px;" des="c1,2" v-on:click.prevent="onDisclaimerClick(mazdaDetails.allElectric.desclaimer2)">2</sup></h4>
+                        <p class="line-height-1 text-white-50" style="font-size:0.625rem;color:#6c6c6c;">EPA-Estimated</p>
+                     </div>
+                     <div class="col-md-4 pt-4">
+                        <p class="line-height-1 m-0 text-center" style="font-size:0.625rem;
+                           color: #fff;letter-spacing:0.5px;
+                           ">Combined MPGe</p>
+                        <h4 class="line-height-1 my-1 text-center position-relative font-weight-bold" style="font-size:1.5rem;letter-spacing:1.2px;">56 MPG<span class="text-lowercase">e</span><sup class="disclosure-text ft-16 feature-desclaimers position-absolute" style="top:4px;font-size: 0.5rem;letter-spacing: 0.4px;"  des="c1,3" v-on:click.prevent="onDisclaimerClick(mazdaDetails.allElectric.desclaimer3)">3</sup></h4>
+                        <p class="line-height-1 " style="font-size:0.625rem;color:#6c6c6c;">EPA-Estimated</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <section class="performanceSection">
+         <div style="position: relative;">
+            <img alt="Snow" class="img-fluid" src="https://prod.cdn.secureoffersites.com/images/oem/mazda/2024-cx90-phev/001_CX90-PHEV_Profile_def1.2.jpeg" style="width:100%;" />
+            <div class="bottom-left col-7 mt-5 mx-auto mx-lg-left overlay-text text-center text-lg-left">
+                  <p class="font-weight-bold" style="font-size: 0.813rem; letter-spacing:1.69px">PERFORMANCE</p>
+                  <p class="font-weight-bold" style="font-size:1.25rem;letter-spacing:3.08px">THE CX-90 PHEV</p>
+                  <p style="font-size: 1rem; line-height:1.75;">The Mazda CX-90 Plug-in Hybrid Electric powertrain is designed to run all-electric for shorter trips with a 26-mile range, or combustion and electric for longer journeys with a 490-mile range. Our rear-biased all-wheel drive, performance focused platform with up to 323 hp works in unison with the flexible hybrid system, resulting in truly nimble and exhilarating driving dynamics&mdash;all in a 3-row SUV. <sup class="disclosure-text ft-16 feature-desclaimers" des="c1,2" v-on:click.prevent="onDisclaimerClick('EPA-estimated range includes both city and highway driving. EV Range is based on a full charge with electric-only driving. Total Driving Range is based on a full charge and full tank with operation on both electricity and gasoline. Range will vary based on vehicle and battery condition, temperature, driving habits and other factors. Use for comparison purposes only. Actual results will vary.')">4</sup></p>
+            </div>
+         </div>  
+      </section>
+      <section class="mazda-vehicle-select-section" style="background-color: #f5f5f5;" v-bind:class="mazdaDetails.className">
+         <mazda-vehicle-select v-bind:colors="mazdaDetails.colors" v-bind:subheading="mazdaDetails.header.pickYourStyleSubHeading" v-bind:title="mazdaDetails.header.pickYourStyleHeading" v-on:opendisclosure="onDisclaimerClick($event)"> </mazda-vehicle-select>
+      </section>
+      <section class="mazda-vehicle-featues-section py-5" v-bind:class="mazdaDetails.className" v-if="!mazdaDetails.hideFeatures">
+         <div class="row design-section">
+            <div class="col-md-7 m-auto text-center" style="color: #101010;">
+               <p class="m-0 font-weight-bold" style="font-size: 0.813rem;letter-spacing: 1.69px;">DESIGN</p>
+               <p class="ft-20 font-weight-bold" style="font-size: 1.25rem;font-weight: bold;letter-spacing: 3.08px;">CRAFTED TO A FEELING</p>
+               <p :class="{'px-3':ismobile}" class="px-1" style="font-size: 0.875rem;line-height: 1.71;">In Japan, it&rsquo;s said that the energy a craftsman puts into their creation can be transferred to its recipients. This was certainly the intent while designing the Mazda CX-90 PHEV. Every nuance of the CX-90 is designed to express the creative spirit and energy of the craftsmen who created it, leaving you feeling empowered, uplifted and invigorated with every drive.</p>
+            </div>
+         </div>
+         <mazda-vehicle-featues v-bind:features="mazdaDetails.design_" v-on:opendisclosure="onDisclaimerClick($event)"> </mazda-vehicle-featues>
+      </section>
+      <section class="car-gallery pt-2">
+         <div class="gallery-container">
+            <div class="gallery-image-1"><img class="cx90Phev-gallery-image" src="https://prod.cdn.secureoffersites.com/images/oem/mazda/2024-cx90-phev/009_CX90-PHEV_Profile-Charging_def1.jpeg" alt=" "/></div>
+            <div class="gallery-image-2  px-md-3 pl-3 pl-md-0"><img class="cx90Phev-gallery-image" src="https://prod.cdn.secureoffersites.com/images/oem/mazda/2024-cx90-phev/031_CX90-PHEV_Rear78-Running_rgb_def1.jpeg" alt="031_CX90-PHEV_Rear78-Running_rgb_def1" /></div>
+            <div class="gallery-image-3 pt-3 pt-md-0"><img class="cx90Phev-gallery-image" src="https://prod.cdn.secureoffersites.com/images/oem/mazda/2024-cx90-phev/013_CX90-PHEV_Driver-Side-DashFocus_def1.jpeg" alt="013_CX90-PHEV_Driver-Side-DashFocus_def1"  /></div>
+            <div class="gallery-image-4  py-3 pr-md-3 pr-0"><img class="cx90Phev-gallery-image" src="https://prod.cdn.secureoffersites.com/images/oem/mazda/2024-cx90-phev/029_CX90-PHEV_Front74Running_def1.jpeg" alt="029_CX90-PHEV_Front74Running_def1"/></div>
+            <div class="gallery-image-5 pr-3 py-3"><img class="cx90Phev-gallery-image" src="https://prod.cdn.secureoffersites.com/images/oem/mazda/2024-cx90-phev/036_CX90-PHEV_WideHero-LeavingCity_def1.jpg" alt="036_CX90-PHEV_WideHero-LeavingCity_def1"/></div>
+            <div class="gallery-image-6 py-3"><img class="cx90Phev-gallery-image" src="https://prod.cdn.secureoffersites.com/images/oem/mazda/2024-cx90-phev/016_CX90-PHEV_2nd-row-with-console_def1.jpg" alt="016_CX90-PHEV_2nd-row-with-console_def1" /></div>
+         </div>
+      </section>
+      <section class="searchInventory bgcolor-primary">
+         <div class="row">
+            <div class="col-md-6 py-5"><img class="img-fluid" src="https://prod.cdn.secureoffersites.com/images/oem/mazda/2024-cx90-phev/005_CX90-PHEV_Moonroof_def1.jpeg" alt="005_CX90-PHEV_Moonroof_def1"/></div>
+            <div class="col-md-6 pb-3 row">
+               <div class="box w-75 m-auto" style="color: #fff;">
+                  <p class="font-weight-bold" style="letter-spacing: 3.08px;font-size: 1.25rem;">SEARCH INVENTORY</p>
+                  <p :class="{'ft-13':ismobile}" style="text-wrap:balance;line-height: 1.75; font-size: 1rem;">Find the CX-90 model, color and powertrain that&rsquo;s right for you. Explore payment options and even arrange for delivery.</p>
+                  <span class="d-lg-inline-block d-block mr-lg-3"><a class="d-flex align-items-center justify-content-center no-hover secondary-btn mr-lg--2" href="/inventory/new/mazda/mazda-cx-90-phev" style="border-color:white !important; background-color:#ffff !important;
+                     " target="_blank">View Inventory </a></span>
+               </div>
+            </div>
+         </div>
+      </section>
+      <section class="mazda-vehicle-featues-section" v-bind:class="mazdaDetails.className" v-if="!mazdaDetails.hideFeatures">
+         <mazda-vehicle-featues v-bind:features="mazdaDetails.features" v-on:opendisclosure="onDisclaimerClick($event)"> </mazda-vehicle-featues>
+      </section>
+      <section class="py-5" style="background-color:#2b2b2b;">
+         <div class="position-relative">
+            <div style="left: 0rem;height: 100%;width: 100%;">
+               <div class="bottom-left col-md-4 px-md-0 px-3 col-12 mt-5 mx-auto text-center" style="color: #fff;">
+                  <p class=" font-weight-bold" style="font-size: 1.25rem;letter-spacing: 3.08px;">ACCESSORIES</p>
+                  <p  style="line-height: 1.75;font-size: 1rem;">Enjoy your Mazda CX-90 with Genuine Mazda Accessories. Explore lifestyle, protection, cargo, and more designed as the perfect extension to your driving experience.</p>
+                  <a class="py-2 no-hover" style="border-bottom: 2px solid #999;letter-spacing: 2px;cursor:pointer;color: #999;" v-on:click="requestQuoteModal()">LEARN MORE</a>
+               </div>
+            </div>
+         </div>
+      </section>
+      <section>
+         <div class="row py-5 my-4">
+            <div class="col-md-7 m-auto text-center">
+               <p class="m-0 font-weight-bold py-2" style="letter-spacing: 3.08px;font-size: 1.25rem;color:#101010">CURIOUS TO LEARN ABOUT THE INLINE 6 TURBO CX-90?</p>
+               <a class=" no-hover font-weight-bold py-2" href="/2024-mazda-cx-90" style="border-bottom:2px solid #999;letter-spacing: 2px;font-size: 0.813rem;color:#999;" target="_blank">EXPLORE CX-90 INLINE </a>
+            </div>
+         </div>
+      </section>
+      <div class="section11">
+         <div class="py-4 text-center">
+            <p class="m-0 font-weight-bold" style="color:#101010;letter-spacing: 4.1px;font-size: 1.375rem;">FAQ &ndash; ANSWERS TO ALL THINGS ELECTRIC</p>
+         </div>
+         <div class="m-0 bg-white py-4 px-5">
+            <div class="row">
+               <div class="col-md-12 container">
+                  <div class="accordion" role="tablist">
+                     <b-card no-body="" style="border-bottom:1px solid #999;border-top:1px solid #999;">
+                        <b-card-header class="border-0 py-lg-3" header-tag="header" role="tab" style="background-color:#ffffff !important">
+                           <b-button block="" class="text-left p-4 font-weight-bold" style="font-size:0.938rem;color:#999;letter-spacing: 3px;background-color:#ffffff" v-b-toggle.accordion-1="text-danger" variant="white">CHARGING</b-button>
+                        </b-card-header>
+                        <b-collapse accordion="my-accordion" id="accordion-1" role="tabpanel">
+                           <b-card-body class="p-4">
+                              <b-card-text class="subaru-card-body">
+                                 <div>
+                                    <p class="font-weight-bold" style="color:#000000 !important">Can a PHEV run on gas only?</p>
+                                    <p style="color:#101010">The Mazda CX-90 PHEV doesn&rsquo;t ever run purely on the gas engine. While the gas engine will, at times, serve as the CX-90 PHEV&rsquo;s primary power source, it also acts as a generator to ensure the EV battery remains at a minimum state of charge to provide a seamless hybrid drive experience.</p>
+                                 </div>
+                                 <div>
+                                    <p class="font-weight-bold" style="color:#000000">How can I charge my PHEV at home?</p>
+                                    <p style="color:#101010">Thanks to its versatile charging port, charging a Mazda CX-90 PHEVis easy. Using the portable Level 1 charging cable that comes with your CX-90 PHEV, simply plug your vehicle into a regular wall socket to draw electricity directly from the grid. If you are looking to get the job done faster, you can install a universal Level 2 home charger to deliver a faster supply of power.</p>
+                                 </div>
+                                 <div>
+                                    <p class="font-weight-bold" style="color:#000000">How often do I need to charge my PHEV?</p>
+                                    <p style="color:#101010">For the optimal driving experience, charge every night. Plug-in and gradually top up the battery when not in use. For long drives or those weekends away when your battery runs low, your gas engine is there to provide backup power for your PHEV, taking you further until you are able to recharge again.</p>
+                                 </div>
+                                 <div>
+                                    <p class=" font-weight-bold" style="color:#000000">What kind of charging port is on the CX-90 PHEV?</p>
+                                    <p style="color:#101010">The J1772 port on the CX-90 PHEV is configured to work with Level 1 and Level 2 charging cables.</p>
+                                 </div>
+                                 <div>
+                                    <p class="font-weight-bold" style="color:#000000">Does the CX-90 PHEV come with a charging cable?</p>
+                                    <p style="color:#101010">Yes, the CX-90 PHEV comes standard with a portable Level 1 charging cable to plug into common 120-volt outlets.</p>
+                                 </div>
+                                 <div>
+                                    <p class="font-weight-bold" style="color:#000000">Can the Mazda CX-90 PHEV be charged in the rain?</p>
+                                    
+                                    <p style="color:#101010">Yes. Customers are not exposed to risk of electric shock when charging in the rain. However, we recommend you do not charge the high voltage battery outside if there is heavy rain, strong winds or lightning.</p>
+                                    <p class="mb-1" style="color:#101010">Remove water with a clean cloth if the charge connector or charge plug is wet. Avoid touching the charge port or charge cable with wet hands.</p>
+                                    <p style="color:#101010">The charging port is designed so that it isn&rsquo;t a problem if small amounts of water or dust get in the port when charging the car. Additionally, there is a cap that covers the charging port and a partitioning seal that helps keep the port dry and clean.</p>
+                                 </div>
+                                 <div>
+                                    <p class=" font-weight-bold" style="color:#000000">How do I find public charging stations near me?</p>
+                                    <p style="color:#101010">You can visit Chargepoint <a href="https://na.chargepoint.com/charge_point">https://na.chargepoint.com/charge_point </a> to find public charging stations near you. Owners can also use the MyMazda App to search for and navigate to public charging stations near their home, workplace or other destinations. In addition, owners can also use the ChargePoint app to explore charging stations, view user-generated reviews, check current pricing and pay for their charging sessions.</p>
+                                 </div>
+                                 <div>
+                                    <p class="font-weight-bold" style="color:#000000">Can I plug my Mazda CX-90 PHEV vehicle in at any public charging station?</p>
+                                    <p style="color:#101010">The CX-90 PHEV is compatible with Level 2 charging solutions found at many public charging stations, but not Level 3 (DC Fast) solutions. PHEV cannot charge at Tesla Supercharging stations and is not compatible with the CHAdeMO DC Connector.</p>
+                                 </div>
+                              </b-card-text>
+                           </b-card-body>
+                        </b-collapse>
+                     </b-card>
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-12 container">
+                  <div class="accordion" role="tablist">
+                     <b-card no-body="" style="border-bottom:1px solid #999;">
+                        <b-card-header class="border-0 py-lg-3 " header-tag="header" role="tab" style="background-color:#ffffff !important">
+                           <b-button block="" class="text-left p-4 font-weight-bold" style="font-size:0.938rem;color:#999;letter-spacing: 3px; background-color:#ffffff" v-b-toggle.accordion-2="" variant="white"> RANGE </b-button>
+                        </b-card-header>
+                        <b-collapse accordion="my-accordion" id="accordion-2" role="tabpanel">
+                           <b-card-body class="p-4">
+                              <b-card-text class="subaru-card-body">
+                                 <div>
+                                    <p class=" font-weight-bold" style="color:#000000">Is there a way to optimize the range?</p>
+                                    <p class="mb-1" style="color:#101010">Yes. Like fuel efficiency with gas engines, your speed and the use of electrical features within the car that rely on battery power, such as air conditioning or heated seats, may also affect the vehicle&rsquo;s range. Reducing the energy consumption of the vehicle will increase the range. To maximize driving range, consider these steps:</p>
+                                    <ul style="color:#101010">
+                                       <li>Pre-heating or pre-cooling your vehicle&rsquo;s cabin via the MyMazda App while charging.<sup class="disclosure-text ft-16 feature-desclaimers" des="c1,2" v-on:click.prevent="onDisclaimerClick(' 1 Connected services are subject to change at any time without notice. Mazda Connected Services is provided during a 3-year trial period; annual subscription fees apply thereafter. Use of MyMazda App and compatible phone are required. Connected services require cellular or Wi-Fi service. Data fees may apply. Never drive while distracted or while using a hand-held device. Please see your Owner’s Manual for important feature details and related privacy information. ')">1</sup></li>
+                                       <li>Parking in a garage to minimize the effects from extreme weather.</li>
+                                       <li>Drive efficiently by avoiding heavy acceleration and high speeds, which can drain the battery faster.</li>
+                                       <li>Check your tire pressure often; underinflated tires can negatively impact range.</li>
+                                    </ul>
+                                 </div>
+                                 <div>
+                                    <p class=" font-weight-bold" style="color:#000000">How does temperature affect Mazda electrified vehicles&rsquo; driving range?</p>
+                                    <p style="color:#101010">Lithium-ion batteries prefer an ideal temperature of 77-95&deg; F (25-35&deg; C). If the battery is too cold, range, charging times and performance can decline. Range is less affected by hot weather, but the battery can degrade more quickly and charge more slowly.</p>
+                                 </div>
+                                 <div>
+                                    <p class=" font-weight-bold" style="color:#000000">What if I need to drive a longer distance and have range anxiety?</p>
+                                    <p style="color:#101010">Since the CX-90 PHEV is a gasoline/electric hybrid vehicle, the gasoline engine is there to back up the electric motor when battery charge becomes low. You can fill your PHEV up with gas at any available gas station.</p>
+                                 </div>
+                              </b-card-text>
+                           </b-card-body>
+                        </b-collapse>
+                     </b-card>
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-12 container">
+                  <div class="accordion" role="tablist">
+                     <b-card no-body="" style="border-bottom:1px solid #999;">
+                        <b-card-header class="border-0 py-lg-3 " header-tag="header" role="tab" style="background-color:#ffffff !important">
+                           <b-button block="" class="text-left p-4 font-weight-bold" style="font-size:0.938rem;color:#999;letter-spacing: 3px; background-color:#ffffff" v-b-toggle.accordion-3="" variant="white" >BATTERY </b-button>
+                        </b-card-header>
+                        <b-collapse accordion="my-accordion" id="accordion-3" role="tabpanel"  >
+                           <b-card-body class="p-4" >
+                              <b-card-text class="subaru-card-body">
+                                 <div>
+                                    <p class=" font-weight-bold" style="color:#000000">What can I do if I run out of battery charge on the road?</p>
+                                    <p style="color:#101010">The CX-90 PHEV switches over to the gas engine for power when battery charge drops below a certain level. While driving, CX-90 PHEV can also employ &ldquo;Charge Mode&rdquo; that will use the engine to charge the battery up to a preset level of charge.</p>
+                                 </div>
+                                 <div>
+                                    <p class=" font-weight-bold" style="color:#000000">Do electrified cars give off emissions?</p>
+                                    <p class="mb-1" style="color:#101010">When the CX-90 PHEV is operated in electric-only mode, there are no emissions from the vehicle tailpipe. During longer driving distances, when the engine turns on, the PHEV performs similar to a traditional hybrid vehicle, consuming less fuel and producing fewer emissions than similar conventional vehicles.</p>
+                                    <p style="color:#101010">While the CX-90 PHEV can operate on 100% electric power, you cannot operate the vehicle without gasoline in the tank.</p>
+                                 </div>
+                                 <div>
+                                    <p class=" font-weight-bold" style="color:#000000">What kind of battery is equipped with the Mazda CX-90 PHEV?</p>
+                                    <p style="color:#101010">CX-90 PHEV is equipped with a 17.8 kWh lithium-ion battery.</p>
+                                 </div>
+                                 <div>
+                                    <p class=" font-weight-bold" style="color:#000000">Is the battery covered by a warranty?</p>
+                                    <p style="color:#101010">Yes, the CX-90 PHEV lithium-ion batteries come with a High Voltage Battery Limited Warranty and a High Voltage Battery Capacity Limited Warranty. Both warranties are for 96 months or 100,000 miles, whichever comes first. In TZEV states, extended emission warranty coverage of the High Voltage Battery may apply. See your Mazda Dealer for Limited Warranty details</p>
+                                 </div>
+                                 <div>
+                                    <p class=" font-weight-bold" style="color:#000000">Can car batteries be recycled?</p>
+                                    <p style="color:#101010">The batteries used in plug-in hybrids can be recycled. The batteries are lithium-ion type&mdash;just like those in laptops and mobile phones</p>
+                                 </div>
+                              </b-card-text>
+                           </b-card-body>
+                        </b-collapse>
+                     </b-card>
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-12 container">
+                  <div class="accordion" role="tablist">
+                     <b-card no-body="" style="border-bottom:1px solid #999;">
+                        <b-card-header class="border-0 py-lg-3 " header-tag="header" role="tab" style="background-color:#ffffff !important">
+                           <b-button block="" class="text-left p-4 font-weight-bold" style="font-size:0.938rem;color:#999;letter-spacing: 3px;background-color:#ffffff" v-b-toggle.accordion-4="" variant="white"> PURCHASES &amp; REBATES </b-button>
+                        </b-card-header>
+                        <b-collapse accordion="my-accordion" id="accordion-4" role="tabpanel">
+                           <b-card-body class="p-4" >
+                              <b-card-text class="subaru-card-body">
+                              <p style="color:#101010;">A plug-in hybrid vehicle uses both an electric motor and gas-powered engine to optimize fuel efficiency and reduce vehicle emissions. The battery is large enough to enable electric-only operation, allowing the vehicle to be powered completely by its electric engine over limited range and can be charged at home or a charging station as well as by its gas-powered engine.</p> </b-card-text>
+                           </b-card-body>
+                        </b-collapse>
+                     </b-card>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <b-modal centered="" class="p-0" hide-footer="" hide-header="" size="lg" v-model="showMazdaDisclaimer">
+            <a class="close-icon position-absolute no-hover ft-20 font-weight-bold primaryicon-times" href="#" style="right: 10px; top: 10px;color: #626262;font-weight: normal !important;" v-on:click.prevent="onDisclaimerClose()"> </a>
+            <div class="px-lg-5 pt-lg-5 pb-lg-4 p-4 disclaimer-content-text" v-html="disclaimertext" v-if="disclaimertext">{{disclaimertext}}</div>
+         </b-modal>
+         <p>
+            <b-modal centered="" hide-footer="" id="requestQuote" size="md" v-model="requestQuote">
+               <contact-dealer-form :consumereventid="918" :contactbysection="true" v-bind:interesteddata="{'year':'2024','make':'Mazda', 'model':'cx-90-phev'}"> </contact-dealer-form>
+            </b-modal>
+         </p>
+      </div>
+   </section>
+</div>
+
+ 

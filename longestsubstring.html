@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+ </head>
+ <body>
+  <script>
+   let s = 'abcabcbb';
+
+   function findLongestSubstring(s) {
+    let map = new Map();
+    let start = 0,
+     end = 0;
+    for (let i = 0; i < s.length; i++) {
+     if (map.has(s[i]) && s[start] == s[end]) {
+      map.delete(s[i]);
+      start++;
+     } else if (s[start] != s[end]) {
+      map.set(s[i], i);
+      end++;
+     }
+    }
+    console.log(map.size);
+   }
+   findLongestSubstring(s);
+  </script>
+ </body>
+</html>

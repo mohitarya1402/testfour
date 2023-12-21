@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <button id="testBtn">click me</button>
+<script>
+        
+// function buySell(price)
+// {debugger
+//   let buyPrice =price[0],currentPrice=price[0],profit=0;
+//    for(let i=0;i<price.length;i++)
+//    {
+    
+//       if(price[i]<buyPrice)
+//       { 
+//         buyPrice= price[i];
+//       }
+//       else if(price[i]> buyPrice)
+//       {
+//         profit = Math.max(profit,price[i]-buyPrice)
+//       }
+//    }   
+  
+//   return profit;
+// }
+
+
+// function eventTest()
+// {
+//   let a = 0;
+//   document.getElementById("testBtn").addEventListener('click',function xyz(){
+//     debugger
+// console.log("button clicked ",a++);
+//   })
+// }
+// eventTest();
+
+// let prices = [1,4,2]
+// console.log(buySell(prices))
+
+// function test()
+// {
+//   debugger
+//   let nums = [3,3,4,1,2,1,2]
+
+// let sum = 0;
+// for(let i=0;i<nums.length;i++)
+// {
+//   sum =sum^nums[i];
+//   console.log(sum)
+// }
+// console.log("ans "+sum)
+// }
+// test()
+// function majorityEle(ar)
+// {
+//   debugger
+//   if(ar.length==1)
+//   {
+//     return ar[0];
+//   }
+//   const map = new Map();
+//   let i=0;
+//   let maxValue = 0,maxValueKey=0;
+// for(let a = 0; a<ar.length;a++)
+// {
+//   if(map.has(ar[a]))
+//   {
+//     let currentValue = map.get(ar[a]);
+//     map.set(ar[a],currentValue=currentValue+1) 
+//     if(map.get(ar[a])>maxValue)
+//     {
+//       maxValue = map.get(ar[a])
+//       maxValueKey = ar[a];
+//     }
+//   }
+//   else{
+//     map.set(ar[a],1)
+//   }
+// }
+// console.log(map)
+// return maxValueKey;
+// }
+
+// let  nums =  [2,2,1,1,1,2,2];
+// console.log(majorityEle(nums).toString());
+
+
+function containsDuplicate(ar,k)
+{
+const maty = new Map([[1,33],[2,34]])
+
+console.log(maty)
+console.log(maty.get(1))
+  const dup = new Map()
+
+  // for(let i=0;i<ar.length;i++)
+  // {
+  //   for(let j=i+1;j<ar.length;j++)
+  //   {
+      
+  //     if(ar[i]==ar[j]&&Math.abs(j-i)<=k)
+  //     {
+  //       return true;
+  //     }
+  //   }  
+  // }
+ 
+for(let i=0;i<ar.length;i++)
+{ debugger
+  let tempValue =0;
+  let a = ar[i];
+  // console.log("map vali ",dup.has(a))
+  if(dup.has(ar[i]))
+  {
+    console.log("hell")
+    tempValue = dup.get(ar[i]);
+      if(tempValue ==ar[i]&&Math.abs(map[ar[i]]-i)<=k)
+      {
+        return true;
+      }
+  } 
+  dup.set(ar[i],i)
+}
+console.log(dup)
+console.log(dup.has(ar[1]))
+  // return false;
+}
+let nums = [1,2,3,1], k = 3
+console.log(containsDuplicate(nums,k));
+</script>
+</body>
+</html>

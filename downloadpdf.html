@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>Download PDF</title>
+ </head>
+ <body>
+  <button onclick="downloadPDF()">Download PDF</button>
+
+  <script>
+   function downloadPDF() {
+    const pdfURL =
+     'https://prod.cdn.secureoffersites.com/images/oem/volkswagen/military-first-responder/VW_Military_Booklet_2023.pdf';
+    const link = document.createElement('a');
+    link.href = pdfURL;
+    link.download = 'VW_Military_Booklet_2023.pdf';
+    link.style.display = 'none';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+   }
+  </script>
+ </body>
+</html>
